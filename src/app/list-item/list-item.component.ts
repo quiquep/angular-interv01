@@ -1,5 +1,4 @@
-import { Component, Input, Output } from "@angular/core";
-import { EventEmitter } from "events";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 @Component({
   selector: "app-list-item",
@@ -8,13 +7,13 @@ import { EventEmitter } from "events";
 })
 export class ListItem {
   @Input() item = {};
-  @Output() click: EventEmitter = new EventEmitter();
+  @Output() onClickItem: EventEmitter = new EventEmitter();
 
-  up() {
-    this.click.emit("up");
+  up(id) {
+    this.onClickItem.emit({ action: "up", id });
   }
 
-  down() {
-    this.click.emit("down");
+  down(id) {
+    this.onClickItem.emit({ action: "down", id });
   }
 }

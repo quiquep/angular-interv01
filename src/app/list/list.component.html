@@ -1,5 +1,8 @@
 <div class="list">
   <div *ngFor="let item of items">
-    <app-list-item [item]="item" ()></app-list-item>
+    <app-list-item
+      [item]="item"
+      (onClickItem)="orderList($event)"
+    ></app-list-item>
   </div>
 </div>
