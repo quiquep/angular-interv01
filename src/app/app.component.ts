@@ -6,5 +6,10 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "CodeSandbox";
+  items = [
+    { id: 1, name: "Orange", position: "" },
+    { id: 2, name: "Apple", position: "" },
+    { id: 3, name: "Bannana", position: "" },
+    { id: 4, name: "Lemon", position: "" }
+  ];
 }
