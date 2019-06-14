@@ -23,7 +23,7 @@ export class ListComponent {
       this.items.splice(index, 1);
       this.items.push(item);
       this.items.sort((a, b) => {
-        return this.items.indexOf(a) - this.items.indexOf(b);
+        return a.id - b.id;
       });
     } else {
     }
